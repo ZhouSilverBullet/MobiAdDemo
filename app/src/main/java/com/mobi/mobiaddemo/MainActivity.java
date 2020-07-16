@@ -2,6 +2,7 @@ package com.mobi.mobiaddemo;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -17,7 +18,6 @@ import com.mobi.core.listener.IFullScreenVideoAdListener;
 import com.mobi.core.listener.IInteractionAdListener;
 import com.mobi.core.listener.IRewardAdListener;
 import com.mobi.core.strategy.StrategyError;
-import com.mobi.core.utils.LogUtils;
 
 import java.util.List;
 
@@ -48,12 +48,12 @@ public class MainActivity extends AppCompatActivity {
         MobiPubSdk.loadNativeExpress(this, flContainer, adParams, new IExpressListener() {
             @Override
             public void onAdClick(String type) {
-                LogUtils.e(TAG, "onAdClick type : " + type);
+                Log.e(TAG, "onAdClick type : " + type);
             }
 
             @Override
             public void onAdLoad(String type, ExpressAdView view) {
-                LogUtils.e(TAG, "onAdLoad type : " + type);
+                Log.e(TAG, "onAdLoad type : " + type);
                 if (view != null) {
                     view.show();
                 }
@@ -62,25 +62,25 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onAdFail(List<StrategyError> strategyErrorList) {
                 for (StrategyError strategyError : strategyErrorList) {
-                    LogUtils.e(TAG, "onLoadFailed type : " + strategyError.getProviderType()
+                    Log.e(TAG, "onLoadFailed type : " + strategyError.getProviderType()
                             + " faildCode : " + strategyError.getCode() + ", faildMsg: " + strategyError.getMessage());
                 }
             }
 
             @Override
             public void onAdClose(String type) {
-                LogUtils.e(TAG, "onAdDismissed type : " + type);
+                Log.e(TAG, "onAdDismissed type : " + type);
 
             }
 
             @Override
             public void onAdRenderSuccess(String type) {
-                LogUtils.e(TAG, "onAdRenderSuccess type : " + type);
+                Log.e(TAG, "onAdRenderSuccess type : " + type);
             }
 
             @Override
             public void onAdExposure(String type) {
-                LogUtils.e(TAG, "onAdShow type : " + type);
+                Log.e(TAG, "onAdShow type : " + type);
             }
         });
     }
@@ -138,14 +138,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onAdFail(List<StrategyError> strategyErrorList) {
                 for (StrategyError strategyError : strategyErrorList) {
-                    LogUtils.e(TAG, "onLoadFailed type : " + strategyError.getProviderType()
+                    Log.e(TAG, "onLoadFailed type : " + strategyError.getProviderType()
                             + " faildCode : " + strategyError.getCode() + ", faildMsg: " + strategyError.getMessage());
                 }
             }
 
             @Override
             public void onAdLoad(String type, RewardAdView view) {
-                LogUtils.e(TAG, "onAdLoad type : " + type);
+                Log.e(TAG, "onAdLoad type : " + type);
                 if (view != null) {
                     view.show();
                 }
@@ -153,42 +153,42 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onAdExpose(String type) {
-                LogUtils.e(TAG, "onAdExpose type : " + type);
+                Log.e(TAG, "onAdExpose type : " + type);
             }
 
             @Override
             public void onAdShow(String type) {
-                LogUtils.e(TAG, "onAdGdtShow type : " + type);
+                Log.e(TAG, "onAdGdtShow type : " + type);
             }
 
             @Override
             public void onAdClick(String type) {
-                LogUtils.e(TAG, "onAdLoad type : " + type);
+                Log.e(TAG, "onAdLoad type : " + type);
             }
 
             @Override
             public void onAdClose(String providerType) {
-                LogUtils.e(TAG, "onAdClose type : " + providerType);
+                Log.e(TAG, "onAdClose type : " + providerType);
             }
 
             @Override
             public void onVideoComplete(String providerType) {
-                LogUtils.e(TAG, "onVideoComplete type : " + providerType);
+                Log.e(TAG, "onVideoComplete type : " + providerType);
             }
 
             @Override
             public void onSkippedVideo(String providerType) {
-                LogUtils.e(TAG, "onSkippedVideo type : " + providerType);
+                Log.e(TAG, "onSkippedVideo type : " + providerType);
             }
 
             @Override
             public void onRewardVerify(String providerType, boolean rewardVerify, int rewardAmount, String rewardName) {
-                LogUtils.e(TAG, "onRewardVerify type : " + providerType);
+                Log.e(TAG, "onRewardVerify type : " + providerType);
             }
 
             @Override
             public void onCached(String type) {
-                LogUtils.e(TAG, "onCached type : " + type);
+                Log.e(TAG, "onCached type : " + type);
             }
         });
     }
@@ -207,19 +207,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onAdFail(List<StrategyError> strategyErrorList) {
                 for (StrategyError strategyError : strategyErrorList) {
-                    LogUtils.e(TAG, "onLoadFailed type : " + strategyError.getProviderType()
+                    Log.e(TAG, "onLoadFailed type : " + strategyError.getProviderType()
                             + " faildCode : " + strategyError.getCode() + ", faildMsg: " + strategyError.getMessage());
                 }
             }
 
             @Override
             public void onAdExposure(String type) {
-                LogUtils.e(TAG, "onAdShow ");
+                Log.e(TAG, "onAdShow ");
             }
 
             @Override
             public void onAdLoad(String type, FullscreenAdView view) {
-                LogUtils.e(TAG, "onAdLoad ");
+                Log.e(TAG, "onAdLoad ");
                 if (view != null) {
                     view.show();
                 }
@@ -227,27 +227,27 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onCached(String type) {
-                LogUtils.e(TAG, "onCached ");
+                Log.e(TAG, "onCached ");
             }
 
             @Override
             public void onAdClose(String providerType) {
-                LogUtils.e(TAG, "onAdClose ");
+                Log.e(TAG, "onAdClose ");
             }
 
             @Override
             public void onVideoComplete(String providerType) {
-                LogUtils.e(TAG, "onVideoComplete ");
+                Log.e(TAG, "onVideoComplete ");
             }
 
             @Override
             public void onSkippedVideo(String providerType) {
-                LogUtils.e(TAG, "onSkippedVideo ");
+                Log.e(TAG, "onSkippedVideo ");
             }
 
             @Override
             public void onAdClick(String providerType) {
-                LogUtils.e(TAG, "onAdVideoBarClick ");
+                Log.e(TAG, "onAdVideoBarClick ");
             }
         });
     }
