@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void btnExpress(View view) {
         AdParams adParams = new AdParams.Builder()
-                .setCodeId("1024001")
+                .setCodeId("3014002")
                 .setAdCount(1)
                 .setImageAcceptedSize(640, 320)
                 .setExpressViewAcceptedSize(350, 0)
@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void btnInteraction(View view) {
         AdParams adParams = new AdParams.Builder()
-                .setCodeId("1024004")
+                .setCodeId("3014003")
                 .build();
         MobiPubSdk.loadInteractionExpress(this, adParams, new IInteractionAdListener() {
             @Override
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
     public void btnReward(View view) {
         AdParams adParams = new AdParams.Builder()
                 .setAutoShowAd(false)
-                .setCodeId("1024003")
+                .setCodeId("3014004")
                 .build();
 
         MobiPubSdk.loadRewardView(this, adParams, new IRewardAdListener() {
@@ -199,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void btnFullScreen(View view) {
         AdParams adParams = new AdParams.Builder()
-                .setCodeId("1024002")
+                .setCodeId("3014005")
                 .setOrientation(ConstantValue.VERTICAL)
                 .build();
 

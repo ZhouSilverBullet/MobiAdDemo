@@ -19,7 +19,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        MobiPubSdk.init(this, "1028", BuildConfig.DEBUG);
+        MobiPubSdk.init(this, "3014", BuildConfig.DEBUG);
 
         //初始化穿山甲
         TTSdkInit.init(this,
