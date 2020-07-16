@@ -27,30 +27,19 @@ android {
 
 }
 
-repositories {
-    flatDir {
-        dirs 'libs'
-    }
-}
-
-
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation files('libs/mobi_mediation_1.0.0.aar')
+    implementation files('libs/mobi_mediation_gdt_1.0.0.aar')
+    implementation files('libs/mobi_mediation_ks_1.0.0.aar')
+    implementation files('libs/mobi_mediation_mobi_1.0.0.aar')
+    implementation files('libs/mobi_mediation_tt_1.0.0.aar')
 
-//    implementation files('libs/mobi_mediation_1.0.0.aar')
-//    implementation files('libs/mobi_mediation_gdt_1.0.0.aar')
-//    implementation files('libs/mobi_mediation_ks_1.0.0.aar')
-//    implementation files('libs/mobi_mediation_mobi_1.0.0.aar')
-//    implementation files('libs/mobi_mediation_tt_1.0.0.aar')
-//
-//    implementation files('libs/ks_adsdk-2.6.4.1.aar')
-//    implementation files('libs/mobiad_1.0.0_debug.aar')
-//    implementation files('libs/open_ad_sdk.aar')
-//    implementation files('libs/GDTSDK.unionNormal.4.176.1046.aar')
-
-
-
+    implementation files('libs/ks_adsdk-2.6.4.1.aar')
+    implementation files('libs/mobiad_1.0.0_debug.aar')
+    implementation files('libs/open_ad_sdk.aar')
+    implementation files('libs/GDTSDK.unionNormal.4.230.1100.aar')
 
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'

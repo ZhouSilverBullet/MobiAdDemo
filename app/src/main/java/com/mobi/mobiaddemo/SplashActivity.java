@@ -1,7 +1,6 @@
 package com.mobi.mobiaddemo;
 
 import android.content.Intent;
-import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,7 +9,6 @@ import android.view.ViewGroup;
 
 import com.mobi.core.AdParams;
 import com.mobi.core.common.MobiPubSdk;
-import com.mobi.core.feature.IAdView;
 import com.mobi.core.feature.SplashAdView;
 import com.mobi.core.listener.ISplashAdListener;
 import com.mobi.core.splash.BaseSplashSkipView;
@@ -31,7 +29,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        clRoot = findViewById(R.id.clRoot);
+        clRoot = findViewById(R.id.flRoot);
         clRoot.post(() -> showSplash(clRoot));
 
         if (getIntent() != null) {
