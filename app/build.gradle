@@ -37,7 +37,7 @@ dependencies {
     implementation files('libs/mobi_mediation_tt_1.0.0.aar')
 
     implementation files('libs/ks_adsdk-2.6.4.1.aar')
-    implementation files('libs/mobiad_1.0.0_debug.aar')
+    implementation files('libs/mobiad_1.0.0.aar')
     implementation files('libs/open_ad_sdk.aar')
     implementation files('libs/GDTSDK.unionNormal.4.230.1100.aar')
 
