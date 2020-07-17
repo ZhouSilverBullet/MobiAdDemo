@@ -30,16 +30,29 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    //汇川聚合sdk 必须要
     implementation files('libs/mobi_mediation_1.0.0.aar')
-    implementation files('libs/mobi_mediation_gdt_1.0.0.aar')
-    implementation files('libs/mobi_mediation_ks_1.0.0.aar')
-    implementation files('libs/mobi_mediation_mobi_1.0.0.aar')
-    implementation files('libs/mobi_mediation_tt_1.0.0.aar')
 
-    implementation files('libs/ks_adsdk-2.6.4.1.aar')
-    implementation files('libs/mobiad_1.0.0.aar')
+    //汇川聚合sdk 穿山甲支持包
+    implementation files('libs/mobi_mediation_tt_1.0.0.aar')
+    //穿山甲sdk
     implementation files('libs/open_ad_sdk.aar')
+
+    //汇川聚合sdk 优量汇支持包
+    implementation files('libs/mobi_mediation_gdt_1.0.0.aar')
+    //优量汇sdk
     implementation files('libs/GDTSDK.unionNormal.4.230.1100.aar')
+
+    //汇川聚合sdk 快手支持包
+    implementation files('libs/mobi_mediation_ks_1.0.0.aar')
+    //快手sdk
+    implementation files('libs/ks_adsdk-2.6.4.1.aar')
+
+    //汇川聚合sdk mobisdk支持包
+    implementation files('libs/mobi_mediation_mobi_1.0.0.aar')
+    //mobisdk
+    implementation files('libs/mobiad_1.0.0.aar')
+
 
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
